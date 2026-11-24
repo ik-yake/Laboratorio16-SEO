@@ -1,0 +1,39 @@
+.about-lead, .about-columns, .contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+  gap: clamp(2rem,6vw,6rem);
+  align-items: start;
+}
+.about-lead { align-items:center; }
+.about-lead h1, .contact-intro h1 { font-size:clamp(2.8rem,5.7vw,6rem); line-height:1.05; margin:1rem 0; }
+.about-lead figure { margin:0; }
+.about-lead img,.contact-intro img { width:100%; height:auto; display:block; }
+.about-lead figcaption { font-size:.83rem; margin-top:.6rem; color:#526156; }
+.about-story { background:#142821; color:#f5f3ed; }
+.about-story h2,.about-story h3,.about-story p { color:inherit; }
+.about-story h3 { margin-bottom:.3rem; }
+.about-values,.fields { display:grid; gap:1.3rem; }
+.about-values { grid-template-columns:repeat(3,minmax(0,1fr)); margin:2rem 0; }
+.about-values article { border-top:1px solid #B79A68; padding-top:1rem; }
+.contact-intro img { margin-top:2rem; }
+.contact-form { background:#fff; padding:clamp(1.25rem,3vw,3rem); color:#142821; border:1px solid #dcdcd3; }
+.contact-form h2 { margin-top:0; }
+.fields { grid-template-columns:repeat(2,minmax(0,1fr)); margin:1.5rem 0; }
+.fields label { display:flex; flex-direction:column; gap:.35rem; font-weight:600; }
+.fields label small { font-weight:400; }
+.fields .wide { grid-column:1/-1; }
+.fields input,.fields select,.fields textarea { min-width:0; width:100%; box-sizing:border-box; padding:.7rem; background:white; border:1px solid #869488; font:inherit; color:#142821; border-radius:0; }
+.fields textarea { resize:vertical; }
+.contact-form details { font-size:.9rem; }
+.contact-form summary { cursor:pointer; text-decoration:underline; }
+.consent { display:block; margin:1rem 0; }
+.consent input { width:1rem; height:1rem; accent-color:#142821; }
+.field-error { color:#8d2921; font-size:.85rem; display:block; }
+.field-error:empty,#form-status:empty { display:none; }
+.contact-form [aria-invalid="true"] { border-color:#8d2921; }
+#form-status { padding:1rem; background:#f5f3ed; border-left:3px solid #B79A68; }
+@media (max-width:760px) {
+  .about-lead,.about-columns,.contact-layout,.about-values { grid-template-columns:1fr; }
+  .contact-intro img { max-height:15rem; object-fit:cover; }
+}
+@media (max-width:500px) { .fields { grid-template-columns:1fr; } }

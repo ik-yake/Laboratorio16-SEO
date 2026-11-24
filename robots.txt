@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://MI-DOMINIO.vercel.app/sitemap.xml
