@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://MI-DOMINIO.vercel.app/sitemap.xml
+Sitemap: https://laboratorio16-seo.vercel.app/sitemap.xml
